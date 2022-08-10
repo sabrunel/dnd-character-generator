@@ -1,0 +1,22 @@
+Stout Halfling Cleric (Life) 
+Chaotic Good 
+Female
+***************
+Ability scores
+CHA	16 (3)
+CON	16 (3)
+DEX	13 (1)
+INT	16 (3)
+STR	14 (2)
+WIS	14 (2)
+***************
+Hit die : 11
+Armor Class : 11
+Speed : 25
+Skills : Insight, Persuasion
+Proficiencies : Medium Armor, Shields, Simple Weapons, Light Armor
+Saving throws : WIS, CHA
+Traits : Brave, Halfling Nimbleness, Lucky
+Languages : Common, Halfling
+Deity : Cyrrollalee
+Base inventory : 1 Shield
