@@ -9,8 +9,8 @@ To remedy this issue while having fun discovering Python, I created this level 1
 The project itself revolves around:
 
 - A Jupyter notebook used to collect data and generate the `dataset.json` file, a dictionary of all informations about races, classes and their respective variations in D&D 5th edition. Helper functions used to collect data are stored in the /lib folder.
-
-- A `character_generator.py` file.
+- A `character_generator.py` file, used to generate the random character.
+- An `app.py` file, running the Tkinter GUI app.
 
 
 ### Resources
@@ -19,7 +19,8 @@ In order to build the dataset used by this program, the following resources were
 
 - The D&D 5e API available at https://www.dnd5eapi.co/.
 - The Forgotten Realms Wiki available at https://forgottenrealms.fandom.com/wiki/.
-- Dungeons and Dragons 5th edition - Player's Handbook
+- Dungeons and Dragons 5th edition - Player's Handbook.
+- The awesome https://www.reroll.co/ app to generate pixel art character sprites.
 
 ### Requirements
 
@@ -32,27 +33,25 @@ Each package can be installed using the Pip command, or in conda with:
 
 ### Run the generator
 
-Open the command line and navigate to the folder containing `character_generator.py`
+Open the command line and navigate to the folder containing `app.py`
 
 Then simply type:
 
-`python character_generator.py`
+`python app.py`
 
-Follow instructions in the Terminal to either keep generating random characters, or save the currently printed character to a text file.
+Follow instructions in the app to either keep generating random characters, or save the currently printed character to a text file.
 
 
 ## What I learned
 
 This project started as a fun exploration project to get familiar with Python, and as it progressed I learned how to:
 
-- Collect data from APIs and webscraping (using the request and Selenium packages)
-- Use Python functions and classes
-- Handle various data structures (dictionaries, lists, strings)
+- Collect data from APIs and webscraping (using the requests and Selenium packages)
+- Use Python functions, classes, and handle various data structures (dictionaries, lists, strings)
 - Make an (almost) unhealthy use of the random package
+- Use Tkinter to create a simple GUI.
 
 
 ## What's next?
 
 Some features are currently missing to call this character complete: background and occupation, proper starting inventory, physical traits and behavior, and - why not - a name.
-
-Also, as I started tinkering with the Tkinter package, expect a GUI for this project very soon.

@@ -1,5 +1,5 @@
 import tkinter as tk
-from PIL import ImageTk, Image
+from PIL import ImageTk
 from character_generator import *
 
 # Colors
