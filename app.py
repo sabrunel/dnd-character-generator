@@ -1,5 +1,5 @@
 import tkinter as tk
-from PIL import ImageTk
+from PIL import ImageTk, Image
 from character_generator import *
 
 # Colors
@@ -85,11 +85,13 @@ def load_character(root, landing_frame):
     clear_widgets(landing_frame)
     clear_widgets(char_frame)
     char_frame.tkraise()
+
     
     # Roll character
     my_character = generate_character("roll")
 
     # Character frame widgets
+
     ## Title
     tk.Label(
         char_frame,
@@ -110,14 +112,13 @@ def load_character(root, landing_frame):
         justify="center",
         ).grid(row=1, column=0, columnspan=3, pady=15)
 
-    ## Image placeholder
-    tk.Label(
-        char_frame,
-        text="Image will be here soon",
-        bg=clr_bg,
-        fg=clr_txt,
-        font=("TkHeadingFont",14, "bold")
-        ).grid(row=2, rowspan=3, column=0, padx=20)
+    ## Character image
+    avatar=my_character.avatar
+    avatar_resize=avatar.resize((400, 400))
+    tk_img=ImageTk.PhotoImage(avatar_resize)
+    img = tk.Label(char_frame, image=tk_img, bg=clr_bg)
+    img.image = tk_img
+    img.grid(row=2, rowspan=4, column=0, padx=5)
 
     ## Character ability scores
     tk.Label(
@@ -125,9 +126,9 @@ def load_character(root, landing_frame):
         text=my_character.attribute_dict['Ability scores'],
         bg=clr_bg,
         fg=clr_txt,
-        font=("TkMenuFont",14),
+        font=("TkMenuFont",19),
         justify='center',
-        ).grid(row=2, rowspan=3, column=1, pady=20)
+        ).grid(row=2, rowspan=3, column=1, pady=5)
 
     ## Character skills
     for k,v in my_character.attribute_dict.items():
@@ -139,8 +140,8 @@ def load_character(root, landing_frame):
                 fg=clr_txt,
                 font=("TkMenuFont",12),
                 justify='left',
-                wraplength=325
-                ).grid(row=2, column=2, padx=20, pady=15, sticky='w')
+                wraplength=320
+                ).grid(row=2, column=2, padx=20, pady=0, sticky='sw')
 
     ## Character prodiciencies
     for k,v in my_character.attribute_dict.items():
@@ -152,8 +153,8 @@ def load_character(root, landing_frame):
                 fg=clr_txt,
                 font=("TkMenuFont",12),
                 justify='left',
-                wraplength=325
-                ).grid(row=3, column=2, padx=20, pady=15, sticky='w')
+                wraplength=320
+                ).grid(row=3, column=2, padx=20, pady=0, sticky='w')
 
     ## Character deity
     for k,v in my_character.attribute_dict.items():
@@ -165,8 +166,8 @@ def load_character(root, landing_frame):
                 fg=clr_txt,
                 font=("TkMenuFont",12),
                 justify='left',
-                wraplength=325
-                ).grid(row=4, column=2, padx=20, pady=15, sticky='w')
+                wraplength=320
+                ).grid(row=4, column=2, padx=20, pady=0, sticky='nw')
 
     ## Roll again button
     tk.Button(

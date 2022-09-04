@@ -1,20 +1,20 @@
-Lightfoot Halfling Paladin (Oath of Vengeance) - Neutral - Female
+Wood Elf Wizard (Enchanter) - Lawful Good - Male
 ***************
 Ability scores
-CHA	14 (2)
-CON	16 (3)
-DEX	12 (1)
-INT	12 (1)
-STR	13 (1)
-WIS	16 (3)
+CHA	12 (1)
+CON	14 (2)
+DEX	13 (1)
+INT	7 (-2)
+STR	14 (2)
+WIS	9 (-1)
 ***************
-Hit die : 13
+Hit die : 8
 Armor Class : 11
-Speed : 25
-Skills : Intimidation, Medicine
-Proficiencies : Simple Weapons, Shields, All armor, Martial Weapons
-Saving throws : WIS, CHA
-Traits : Brave, Halfling Nimbleness, Lucky
-Languages : Common, Halfling
-Deity : Cyrrollalee
-Base inventory : 1 Chain Mail
+Speed : 30
+Skills : Investigation, Perception, History
+Proficiencies : Daggers, Darts, Slings, Quarterstaffs, Crossbows, light
+Saving throws : INT, WIS
+Traits : Darkvision, Fey Ancestry, Trance, Keen Senses
+Languages : Common, Elvish
+Deity : Aerdrie Faenya
+Base inventory : 1 Spellbook

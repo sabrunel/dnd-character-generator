@@ -1,6 +1,7 @@
 import json
 import random
 from collections import Counter
+from PIL import Image
 
 # Load dataset 
 
@@ -21,6 +22,7 @@ class PlayerCharacter:
         self.alignment = random.choice(dataset['alignments'])
         self.race = random.choice(list(dataset['races'].keys()))
         self.classname = random.choice(list(dataset['classes'].keys()))
+        self.avatar = Image.open("assets/{}_{}_single.png".format(self.race, self.gender[:1]))
                 
         # Core features
         self.base_hit_die = dataset['classes'][self.classname]['hit_die']
@@ -183,10 +185,7 @@ class PlayerCharacter:
                 else:
                     self.deity = random.choice(list(dataset['deities'][pantheon]))
 
-
-
     # Method to generate a dictionary of attributes after converting them to human readable strings
-
     def clean_attributes(self):
 
         # Ability scores and modifiers
