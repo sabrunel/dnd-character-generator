@@ -20,7 +20,8 @@ In order to build the dataset used by this program, the following resources were
 - The D&D 5e API available at https://www.dnd5eapi.co/.
 - The Forgotten Realms Wiki available at https://forgottenrealms.fandom.com/wiki/.
 - Dungeons and Dragons 5th edition - Player's Handbook.
-- The awesome https://www.reroll.co/ app to generate pixel art character sprites.
+
+The awesome https://www.reroll.co/ app was used to generate pixel art character sprites. Other assets / icons come from https://cainos.itch.io/pixel-art-icon-pack-rpg.
 
 ### Requirements
 

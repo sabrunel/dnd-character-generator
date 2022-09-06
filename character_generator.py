@@ -22,7 +22,6 @@ class PlayerCharacter:
         self.alignment = random.choice(dataset['alignments'])
         self.race = random.choice(list(dataset['races'].keys()))
         self.classname = random.choice(list(dataset['classes'].keys()))
-        self.avatar = Image.open("assets/{}_{}_single.png".format(self.race, self.gender[:1]))
                 
         # Core features
         self.base_hit_die = dataset['classes'][self.classname]['hit_die']
@@ -133,7 +132,29 @@ class PlayerCharacter:
         # Calculate modifiers
         self.ability_modifiers = {score:((value-10) // 2) for score,value in self.ability_scores.items()}
 
+    # Method to pick an avatar
+    def set_avatar(self):
 
+        # Define a group for each class (this trick allows us to use the same avatar for several classes)
+        class_group = {
+            'Fighter': 'Warrior',
+            'Ranger': 'Warrior',
+            'Paladin': 'Warrior',
+            'Barbarian': 'Warrior',
+            'Cleric': 'Priest',
+            'Druid': 'Priest',
+            'Monk': 'Priest',
+            'Wizard': 'Wizard',
+            'Warlock': 'Wizard',
+            'Sorcerer': 'Wizard',
+            'Rogue': 'Rogue',
+            'Bard': 'Rogue'
+            }
+
+        # Select an avatar based on group, race and gender
+        self.avatar = Image.open(
+            "assets/{}/{}_{}_single.png".format(class_group[self.classname], self.race, self.gender[:1])
+            ).resize((400, 400))
 
     # Method to set hit points 
     def set_hit_points(self): 
@@ -262,6 +283,9 @@ def generate_character(method):
     # Roll ability scores
     new_character.roll_ability_scores(dataset, method)
 
+    # Select avatar
+    new_character.set_avatar()
+
     # Set hit points and AC
     new_character.set_hit_points()
     new_character.set_armor_class()
@@ -313,26 +337,4 @@ def write_character(character):
             else:
                 print(k, ':', v, file=out_file)
 
-
-# Entry point for the program
-
-if __name__ == '__main__':
-    # Roll a random character and print it in the Terminal
-    while True:
-        print("You rolled a...")
-
-        my_character = generate_character("roll")
-        print_character(my_character)
-
-        # Roll a new character or save the current one to a file and exit the program
-        if input("Roll another character? (Y/N):").strip().upper() != 'Y':
-
-            if input("Save this character character? (Y/N):").strip().upper() == 'Y':
-                write_character(my_character)
-                print("Character saved, exiting program...")
-                break
-
-            else:
-                print("Exiting program...")
-                break
 
