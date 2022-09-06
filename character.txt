@@ -1,0 +1,20 @@
+Drow Ranger (Hunter) - Chaotic Good - Male
+***************
+Ability scores
+CHA	11 (0)
+CON	15 (2)
+DEX	14 (2)
+INT	10 (0)
+STR	11 (0)
+WIS	8 (-1)
+***************
+Hit die : 12
+Armor Class : 12
+Speed : 30
+Skills : Survival, Perception, Nature
+Proficiencies : Light Armor, Medium Armor, Shields, Simple Weapons, Martial Weapons
+Saving throws : STR, DEX
+Traits : Darkvision, Fey Ancestry, Trance, Keen Senses
+Languages : Common, Elvish
+Deity : Ghaunadaur
+Base inventory : 1 Longbow, 20 Arrows
