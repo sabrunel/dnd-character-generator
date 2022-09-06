@@ -12,6 +12,7 @@ The project itself revolves around:
 - A `character_generator.py` file, used to generate the random character.
 - An `app.py` file, running the Tkinter GUI app.
 
+![preview](./assets/app_preview.png)
 
 ### Resources
 
@@ -55,4 +56,4 @@ This project started as a fun exploration project to get familiar with Python, a
 
 ## What's next?
 
-Some features are currently missing to call this character complete: background and occupation, proper starting inventory, physical traits and behavior, and - why not - a name.
+Some features are currently missing to call this character complete: background and occupation, proper starting inventory and - why not - a name.
