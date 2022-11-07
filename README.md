@@ -8,9 +8,10 @@ To remedy this issue while having fun discovering Python, I created this level 1
 
 The project itself revolves around:
 
-- A Jupyter notebook used to collect data and generate the `dataset.json` file, a dictionary of all informations about races, classes and their respective variations in D&D 5th edition. Helper functions used to collect data are stored in the /lib folder.
-- A `character_generator.py` file, used to generate the random character.
+- A Jupyter notebook used to collect data and generate the `dataset.json` file, a dictionary of all informations about races, classes and their respective variations in D&D 5th edition. 
 - An `app.py` file, running the Tkinter GUI app.
+
+Helper functions used to collect data and generate characters are stored in the /lib folder.
 
 ![preview](./assets/app_preview.png)
 

@@ -1,6 +1,6 @@
 import tkinter as tk
 from PIL import ImageTk
-from character_generator import *
+from lib.character_generator import *
 
 # Colors
 clr_bg = "#fffaf0"
